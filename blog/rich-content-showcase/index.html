@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="One post to show every writing tool this site supports — from plain Markdown and GitHub Flavored Markdown to the rich-content shortcodes." />
+    <title>A field guide to rich content on this site — Nurizka</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body data-page="article">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+  <a class="wordmark" href="../../">NURIZKA F</a>
+  <button
+    class="menu-toggle"
+    aria-expanded="false"
+    aria-controls="site-nav"
+  >
+    Menu
+  </button>
+  <nav id="site-nav" aria-label="Primary">
+    <a
+      href="../../about/"
+      
+      >About</a
+    >
+    <a
+      href="../../portfolio/"
+      
+      >Work</a
+    >
+    <a
+      href="../../blog/"
+      aria-current="page"
+      >Notes</a
+    >
+    <a class="nav-cta" href="mailto:nurizkaf96@gmail.com"
+      >Let's talk <i class="arrow-up-right"></i></a
+    >
+  </nav>
+</header>
+    <main id="main" class="detail">
+      <article>
+  <header class="detail-hero">
+    
+    
+      <span class="card-meta">Article</span>
+    
+    <h1>A field guide to rich content on this site</h1>
+    <p class="subtitle">One post to show every writing tool this site supports — from plain Markdown and GitHub Flavored Markdown to the rich-content shortcodes.</p>
+    
+  </header>
+  <div class="detail-body">
+    <p>This is the reference post. It exists so anyone writing for this site — human or agent — can see exactly which formats render, what they look like, and how they are written. Everything below is live, rendered content, built with Eleventy at build time.</p>
+<aside class="callout" style="--callout-accent: #5c8fb8">
+  <span class="callout-label" aria-hidden="true">info</span>
+  <p>Every shortcode on this page is documented in <code>docs/CONTENT-SPEC.md</code>. When in doubt, follow the source, not the styling.</p>
+</aside>
+<h2>1 · Basic Markdown</h2>
+<h3>Inline emphasis</h3>
+<p>You can write <strong>bold</strong>, <em>italic</em>, <s>strikethrough</s>, and code like <code>npm run build</code>. Combine them freely: <strong>bold with <em>italic</em> inside</strong> still works.</p>
+<h3>Links</h3>
+<p><a href="../../about/">Internal links stay on the site</a>, <a href="https://www.11ty.dev/docs/shortcodes/" target="_blank" rel="noopener">external links open in a new tab <i class="arrow-up-right"></i></a> with an arrow icon, and bare URLs autolink automatically: <a href="https://www.11ty.dev/docs/languages/markdown/" target="_blank" rel="noopener">https://www.11ty.dev/docs/languages/markdown/ <i class="arrow-up-right"></i></a></p>
+<h3>Lists</h3>
+<p>Unordered:</p>
+<ul>
+<li>A research interview guide</li>
+<li>A synthesis workshop</li>
+<li>A share-out that asks questions instead of prescribing answers</li>
+</ul>
+<p>Ordered:</p>
+<ol>
+<li>Collect the evidence</li>
+<li>Name the tension</li>
+<li>Make the decision visible</li>
+</ol>
+<p>Nested:</p>
+<ul>
+<li>Design research
+<ul>
+<li>Interviews</li>
+<li>Diary studies</li>
+</ul>
+</li>
+<li>Product strategy
+<ol>
+<li>Frame the problem</li>
+<li>Define the option space</li>
+</ol>
+</li>
+</ul>
+<h3>A pillar of plain writing</h3>
+<blockquote>
+<p>The best insight is useless until someone can act on it.</p>
+</blockquote>
+<h2>2 · GitHub Flavored Markdown</h2>
+<h3>Task lists</h3>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox" checked=""type="checkbox"> Write the field guide</label></li>
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox" checked=""type="checkbox"> Show basic Markdown</label></li>
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox" checked=""type="checkbox"> Show tables, task lists, and code</label></li>
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox"type="checkbox"> Record the launch video</label></li>
+</ul>
+<h3>Tables</h3>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Use it for</th>
+<th>Rendered by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic Markdown</td>
+<td>Headings, lists, links</td>
+<td>markdown-it</td>
+</tr>
+<tr>
+<td>GFM</td>
+<td>Tables, task lists, <code>~~</code></td>
+<td>markdown-it</td>
+</tr>
+<tr>
+<td>Shortcodes</td>
+<td>Figures, callouts, embeds</td>
+<td>Eleventy</td>
+</tr>
+</tbody>
+</table>
+<h3>Fenced code</h3>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">decide</span><span class="token punctuation">(</span><span class="token parameter">evidence<span class="token punctuation">,</span> constraints</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> evidence
+    <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>item<span class="token punctuation">,</span> <span class="token literal-property property">score</span><span class="token operator">:</span> <span class="token function">score</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> constraints<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> b<span class="token punctuation">.</span>score <span class="token operator">-</span> a<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> run build   <span class="token comment"># eleventy builds the whole site</span>
+<span class="token function">npm</span> run start   <span class="token comment"># eleventy --serve with live reload</span></code></pre>
+<h3>Hashes, diffs, other GFM</h3>
+<p><s>This whole section used to be an assumption.</s> Now it is a checklist.</p>
+<table>
+<thead>
+<tr>
+<th>Heading</th>
+<th>What changed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#</code></td>
+<td>Page or post title</td>
+</tr>
+<tr>
+<td><code>##</code></td>
+<td>Section heading</td>
+</tr>
+<tr>
+<td><code>###</code></td>
+<td>Sub-section</td>
+</tr>
+</tbody>
+</table>
+<h2>3 · Rich blocks (the shortcodes)</h2>
+<p>The shortcodes below are the reason this page can show captioned figures, galleries, callouts, timelines, and more. They are Nunjucks shortcodes registered in <code>.eleventy.js</code>.</p>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">figure</span> <span class="token string">"/assets/images/content-demo/abstract-01.svg"</span><span class="token punctuation">,</span> <span class="token string">"Abstract composition"</span><span class="token punctuation">,</span> <span class="token string">"A demo figure with a caption and a credit"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<h3>Figures and images</h3>
+<figure class="content-figure">
+  <img src="../../assets/images/content-demo/abstract-01.svg" alt="Abstract lime composition" loading="lazy" decoding="async">
+  <figcaption>A captioned figure, preferred when the image relates to the text.</figcaption>
+</figure>
+<p>Use <code>image</code> when no caption is needed:</p>
+<img class="content-image" src="../../assets/images/content-demo/abstract-02.svg" alt="A light offset grid pattern" loading="lazy" decoding="async">
+<h3>Gallery</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">gallery</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token variable">assets</span><span class="token operator">/</span><span class="token variable">images</span><span class="token operator">/</span><span class="token variable">content</span><span class="token operator">-</span><span class="token variable">demo</span><span class="token operator">/</span><span class="token variable">abstract</span><span class="token operator">-</span><span class="token number">01</span><span class="token punctuation">.</span><span class="token variable">svg</span> <span class="token operator">|</span> <span class="token variable">First</span> <span class="token variable">concept</span>
+<span class="token operator">/</span><span class="token variable">assets</span><span class="token operator">/</span><span class="token variable">images</span><span class="token operator">/</span><span class="token variable">content</span><span class="token operator">-</span><span class="token variable">demo</span><span class="token operator">/</span><span class="token variable">abstract</span><span class="token operator">-</span><span class="token number">02</span><span class="token punctuation">.</span><span class="token variable">svg</span> <span class="token operator">|</span> <span class="token variable">Second</span> <span class="token variable">concept</span>
+<span class="token operator">/</span><span class="token variable">assets</span><span class="token operator">/</span><span class="token variable">images</span><span class="token operator">/</span><span class="token variable">content</span><span class="token operator">-</span><span class="token variable">demo</span><span class="token operator">/</span><span class="token variable">abstract</span><span class="token operator">-</span><span class="token number">03</span><span class="token punctuation">.</span><span class="token variable">svg</span> <span class="token operator">|</span> <span class="token variable">Third</span> <span class="token variable">concept</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endgallery</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<div class="gallery" data-gallery>
+<figure class="gallery-item">
+  <img src="../../assets/images/content-demo/abstract-01.svg" alt="First concept" loading="lazy" decoding="async" data-lightbox>
+  <figcaption>First concept</figcaption>
+</figure>
+<figure class="gallery-item">
+  <img src="../../assets/images/content-demo/abstract-02.svg" alt="Second concept" loading="lazy" decoding="async" data-lightbox>
+  <figcaption>Second concept</figcaption>
+</figure>
+<figure class="gallery-item">
+  <img src="../../assets/images/content-demo/abstract-03.svg" alt="Third concept" loading="lazy" decoding="async" data-lightbox>
+  <figcaption>Third concept</figcaption>
+</figure>
+</div>
+<p>Click any image to open it full size.</p>
+<h3>Video and audio</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">video</span> <span class="token string">"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"</span><span class="token punctuation">,</span> <span class="token string">"/assets/images/content-demo/poster.svg"</span><span class="token punctuation">,</span> <span class="token string">"A short CC0 demo video with a local poster."</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<figure class="content-media">
+  <video controls preload="metadata" poster="../../assets/images/content-demo/poster.svg" class="content-video">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>A short CC0 demo video with a local poster.</figcaption>
+</figure>
+<figure class="content-media">
+  <audio controls preload="metadata" class="content-audio">
+    <source src="../../assets/audio/content-demo.m4a">
+    Your browser does not support the audio tag.
+  </audio>
+  <figcaption>A spoken demo of the audio shortcode.</figcaption>
+</figure>
+<h3>Callouts</h3>
+<p>The first argument is the callout's <strong>title</strong>, shown as its label. The preset titles each carry a default color:</p>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">callout</span> <span class="token string">"warning"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token variable">This</span> <span class="token variable">block</span> <span class="token variable">carries</span> <span class="token variable">real</span> <span class="token variable">semantic</span> <span class="token variable">weight</span><span class="token punctuation">.</span> <span class="token variable">Use</span> <span class="token variable">it</span> <span class="token variable">sparingly</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endcallout</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<p>A second argument overrides the accent color with any hex value (or a preset name):</p>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">callout</span> <span class="token string">"Milestone"</span><span class="token punctuation">,</span> <span class="token string">"#4a8f5f"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token variable">A</span> <span class="token variable">custom</span> <span class="token variable">title</span> <span class="token keyword">with</span> <span class="token variable">a</span> <span class="token variable">custom</span> <span class="token variable">accent</span> <span class="token variable">color</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endcallout</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<p>The preset titles, rendered:</p>
+<aside class="callout" style="--callout-accent: #5c8fb8">
+  <span class="callout-label" aria-hidden="true">info</span>
+  <p>Useful background that does not change the recommendation.</p>
+</aside>
+<aside class="callout" style="--callout-accent: var(--color-neutral-700)">
+  <span class="callout-label" aria-hidden="true">note</span>
+  <p>A plain note. The neutral default when no other type fits.</p>
+</aside>
+<aside class="callout" style="--callout-accent: var(--color-primary-700)">
+  <span class="callout-label" aria-hidden="true">tip</span>
+  <p>A tip for writers: keep callouts short and give them a real job.</p>
+</aside>
+<aside class="callout" style="--callout-accent: #b98a1a">
+  <span class="callout-label" aria-hidden="true">warning</span>
+  <p>Warning — callouts look strong, so do not use them to decorate headings.</p>
+</aside>
+<aside class="callout" style="--callout-accent: #b0473c">
+  <span class="callout-label" aria-hidden="true">danger</span>
+  <p>Danger — this format is for content where ignoring the advice has real cost.</p>
+</aside>
+<aside class="callout" style="--callout-accent: #8766b0">
+  <span class="callout-label" aria-hidden="true">insight</span>
+  <p>Insight — an observation that changes how the rest of the post reads.</p>
+</aside>
+<aside class="callout" style="--callout-accent: #4a8f5f">
+  <span class="callout-label" aria-hidden="true">success</span>
+  <p>Success — what a good outcome looks like, or what shipped.</p>
+</aside>
+<aside class="callout" style="--callout-accent: #5578a0">
+  <span class="callout-label" aria-hidden="true">question</span>
+  <p>Question — a prompt for the reader to sit with before the next section.</p>
+</aside>
+<p>And a custom title with a custom color — callouts are no longer limited to a fixed set:</p>
+<aside class="callout" style="--callout-accent: #b0473c">
+  <span class="callout-label" aria-hidden="true">Announcement</span>
+  <p>A titled callout with a bespoke accent, from a title and hex color of your choosing.</p>
+</aside>
+<aside class="callout" style="--callout-accent: #8766b0">
+  <span class="callout-label" aria-hidden="true">Key Takeaway</span>
+  <p>The accent can also borrow one of the eight preset colors while keeping a custom title.</p>
+</aside>
+<h3>Quotes, pullquotes, and captions</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">quote</span> <span class="token string">"Mary Oliver"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token variable">Tell</span> <span class="token variable">me</span><span class="token punctuation">,</span> <span class="token variable">what</span> <span class="token keyword">is</span> <span class="token test function">it</span> <span class="token variable">you</span> <span class="token variable">plan</span> <span class="token variable">to</span> <span class="token variable">do</span> <span class="token keyword">with</span> <span class="token variable">your</span> <span class="token variable">one</span> <span class="token variable">wild</span> <span class="token keyword">and</span> <span class="token variable">precious</span> <span class="token variable">life</span>?
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endquote</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<figure class="content-quote">
+  <blockquote><p>Tell me, what is it you plan to do with your one wild and precious life?</p>
+</blockquote>
+  <figcaption><cite>Mary Oliver</cite>, A Poetry Handbook</figcaption>
+</figure>
+<p>A pullquote is centered, borderless, and oversized — editorial emphasis, not attribution:</p>
+<blockquote class="pullquote">
+  <p>The system gets out of the way the moment the content earns its place.</p>
+</blockquote>
+<p>And a plain caption for when a short note needs editorial styling:</p>
+<figure class="content-caption">
+  <figcaption><p>Borders, mono labels, and hairline rules — the visual language of this site.</p>
+</figcaption>
+</figure>
+<h3>Divider</h3>
+<p>Use Markdown <code>---</code> for everyday dividers, or <code>{% divider %}</code> when the rule needs a unique style hook:</p>
+<hr class="content-divider" aria-hidden="true">
+<h3>Expandable details</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">details</span> <span class="token string">"Read the boring appendix"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token variable">Supporting</span> <span class="token variable">context</span> <span class="token variable">goes</span> <span class="token variable">here</span> <span class="token keyword">and</span> <span class="token variable">stays</span> <span class="token variable">collapsed</span> <span class="token keyword">by</span> <span class="token variable">default</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">enddetails</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<details class="content-details">
+  <summary>What is GFM anyway?</summary>
+  <div class="details-body"><p>GitHub Flavored Markdown is CommonMark plus a few practical extensions: tables, task lists, strikethrough, and autolinks. markdown-it covers CommonMark, and the site config adds the remaining GFM pieces.</p>
+</div>
+</details>
+<h3>Aside</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">aside</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token variable">Secondary</span> <span class="token variable">context</span> <span class="token variable">that</span> <span class="token variable">helps</span> <span class="token variable">but</span> <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token test function">part</span> <span class="token variable">of</span> <span class="token variable">the</span> <span class="token variable">main</span> <span class="token variable">narrative</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endaside</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<aside class="content-aside">
+  <p>This aside would sit fine in a sidebar. On a single-column post layout it simply reads as a quieter paragraph band.</p>
+</aside>
+<h2>4 · Actions, links, and metrics</h2>
+<h3>Link card</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">linkcard</span> <span class="token string">"https://www.11ty.dev/docs/shortcodes/"</span><span class="token punctuation">,</span> <span class="token string">"Eleventy shortcodes"</span><span class="token punctuation">,</span> <span class="token string">"The official documentation for shortcodes — single and paired."</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<a class="linkcard" href="https://www.11ty.dev/docs/shortcodes/" target="_blank" rel="noopener">
+  <span class="linkcard-url">11ty.dev</span>
+  <span class="linkcard-title">Eleventy shortcodes</span>
+  <span class="linkcard-desc">The official documentation for shortcodes — single and paired.</span>
+  <i class="arrow-up-right" aria-hidden="true"></i>
+</a>
+<h3>Button</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">button</span> <span class="token string">"Read the full spec"</span><span class="token punctuation">,</span> <span class="token string">"/portfolio/atlas/"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<p><a class="button" href="../../portfolio/atlas/">Read the full spec <i class="arrow-down-right" aria-hidden="true"></i></a></p>
+<h3>Metrics</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">metric</span> <span class="token string">"42%"</span><span class="token punctuation">,</span> <span class="token string">"Fewer handoffs between insight and action"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<div class="metric">
+  <span class="metric-value">42%</span>
+  <span class="metric-label">Fewer handoffs between research and decision</span>
+</div>
+<div class="metric">
+  <span class="metric-value">3×</span>
+  <span class="metric-label">Faster retrieval of past findings</span>
+</div>
+<div class="metric">
+  <span class="metric-value">0</span>
+  <span class="metric-label">Meetings required to unpack a recommendation</span>
+</div>
+<h2>5 · Portfolio-style blocks</h2>
+<h3>Timeline</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">timeline</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">event</span> <span class="token string">"2026-01"</span><span class="token punctuation">,</span> <span class="token string">"Research"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token variable">Initial</span> <span class="token variable">customer</span> <span class="token variable">interviews</span> <span class="token keyword">with</span> <span class="token variable">eight</span> <span class="token variable">owners</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endevent</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">event</span> <span class="token string">"2026-02"</span><span class="token punctuation">,</span> <span class="token string">"Prototype"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token variable">A</span> <span class="token variable">three</span><span class="token operator">-</span><span class="token variable">round</span> <span class="token variable">prototype</span> <span class="token variable">test</span> <span class="token variable">cycle</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endevent</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">event</span> <span class="token string">"2026-03"</span><span class="token punctuation">,</span> <span class="token string">"Ship"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token variable">First</span> <span class="token variable">release</span> <span class="token keyword">with</span> <span class="token variable">a</span> <span class="token variable">content</span> <span class="token variable">pattern</span> <span class="token variable">library</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endevent</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endtimeline</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<ol class="content-timeline">
+<li class="event">
+  <time class="event-date" datetime="2026-01">2026-01</time>
+  <h3>Research</h3>
+  <div class="event-body"><p>Initial customer interviews with eight owners across retail and services.</p>
+</div>
+</li>
+<li class="event">
+  <time class="event-date" datetime="2026-02">2026-02</time>
+  <h3>Prototype</h3>
+  <div class="event-body"><p>A three-round prototype test cycle refining language and thresholds.</p>
+</div>
+</li>
+<li class="event">
+  <time class="event-date" datetime="2026-03">2026-03</time>
+  <h3>Ship</h3>
+  <div class="event-body"><p>First release, shipped with a content pattern library.</p>
+</div>
+</li>
+</ol>
+<h3>Before / after</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">beforeafter</span> <span class="token string">"/assets/images/content-demo/before.svg"</span><span class="token punctuation">,</span> <span class="token string">"/assets/images/content-demo/after.svg"</span><span class="token punctuation">,</span> <span class="token string">"Before"</span><span class="token punctuation">,</span> <span class="token string">"After"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<div class="before-after" data-before-after>
+  <img class="ba-before-img" src="../../assets/images/content-demo/before.svg" alt="Before" loading="lazy" decoding="async">
+  <img class="ba-after-img" src="../../assets/images/content-demo/after.svg" alt="After" loading="lazy" decoding="async">
+  <div class="ba-divider" aria-hidden="true"><span class="ba-handle" aria-hidden="true"></span></div>
+  <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal before and after">
+  <span class="ba-label ba-label--before">Before</span>
+  <span class="ba-label ba-label--after">After</span>
+</div>
+<p>Drag anywhere on the image to compare. Without JavaScript the split still shows at 50/50.</p>
+<h3>Columns</h3>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">columns</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">column</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">**</span><span class="token variable">Reading</span> <span class="token variable">first</span><span class="token punctuation">.</span><span class="token operator">**</span> <span class="token variable">Start</span> <span class="token keyword">with</span> <span class="token variable">the</span> <span class="token variable">prose</span><span class="token punctuation">.</span> <span class="token variable">Layout</span> <span class="token variable">never</span> <span class="token variable">rescues</span> <span class="token variable">a</span> <span class="token variable">weak</span> <span class="token variable">argument</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endcolumn</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">column</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token operator">**</span><span class="token variable">Layout</span> <span class="token variable">second</span><span class="token punctuation">.</span><span class="token operator">**</span> <span class="token variable">Columns</span> <span class="token variable">are</span> <span class="token keyword">for</span> <span class="token variable">genuinely</span> <span class="token variable">parallel</span> <span class="token variable">ideas</span> — <span class="token keyword">not</span> <span class="token keyword">for</span> <span class="token variable">decoration</span><span class="token punctuation">.</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endcolumn</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">endcolumns</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<div class="content-columns">
+<div class="column">
+  <p><strong>Reading first.</strong> Start with the prose. Layout never rescues a weak argument.</p>
+</div>
+<div class="column">
+  <p><strong>Layout second.</strong> Columns are for genuinely parallel ideas — not for decoration.</p>
+</div>
+</div>
+<p>The same block lays out in three columns when it wraps three <code>column</code> blocks:</p>
+<div class="content-columns content-columns-3">
+<div class="column">
+  <p><strong>Three ideas.</strong> Three columns are for content that reads as three genuinely distinct points — not decorative trios.</p>
+</div>
+<div class="column">
+  <p><strong>Still readable.</strong> Each column stays self-contained, opens with a lead, and needs easy scanning.</p>
+</div>
+<div class="column">
+  <p><strong>Mobile first.</strong> All columns collapse to a single column on small screens, so reading order survives.</p>
+</div>
+</div>
+<h2>6 · External embeds</h2>
+<p>External embeds are opt-in and domain-restricted. Dedicated shortcodes cover the most common services.</p>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">youtube</span> <span class="token string">"M7lc1UVf-VE"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<div class="embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/M7lc1UVf-VE" title="YouTube video" loading="lazy" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+</div>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">vimeo</span> <span class="token string">"76979871"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<div class="embed">
+  <iframe src="https://player.vimeo.com/video/76979871" title="Vimeo video" loading="lazy" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+</div>
+<p>The generic <code>embed</code> works for anything on the allowlist — here is a Spotify player:</p>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">embed</span> <span class="token string">"https://open.spotify.com/embed/track/4PTG3Z6ehGkBFwjybzWkR8"</span><span class="token punctuation">,</span> <span class="token string">"A Spotify track embed"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<div class="embed">
+  <iframe src="https://open.spotify.com/embed/track/4PTG3Z6ehGkBFwjybzWkR8" title="A Spotify track embed" loading="lazy" allowfullscreen></iframe>
+</div>
+<p>Optional embeds — CodePen, Gists, and social posts — follow the same pattern:</p>
+<pre class="language-njk"><code class="language-njk"><span class="token delimiter punctuation">{%</span> <span class="token tag keyword">codepen</span> <span class="token string">"team/codepen/pen/WgLbYp"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">gist</span> <span class="token string">"11ty/eleventy"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">tweet</span> <span class="token string">"https://x.com/eleven_ty/status/1234567890"</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token operator">%</span> <span class="token variable">instagram</span> <span class="token string">"https://www.instagram.com/p/abc123/"</span> <span class="token operator">%</span><span class="token punctuation">}</span></code></pre>
+<aside class="callout" style="--callout-accent: var(--color-primary-700)">
+  <span class="callout-label" aria-hidden="true">tip</span>
+  <p>Optional embeds are deliberately not rendered live on this page. The shortcodes exist, but this site prefers local assets whenever the equivalent is possible.</p>
+</aside>
+<h2>Files to touch</h2>
+<p>The whole system follows one rule from <code>docs/CONTENT-SPEC.md</code>:</p>
+<blockquote>
+<p><strong>Markdown handles writing. Shortcodes handle meaningfully richer content. CSS handles presentation. JavaScript handles optional interaction.</strong></p>
+</blockquote>
+<p>If you are adding a new post, only the Markdown file matters — the blog collection picks it up automatically.</p>
+
+  </div>
+</article>
+    </main>
+    <footer class="site-footer">
+  <a class="wordmark" href="../../">NURIZKA F</a>
+  <p>Finding Beauty in Functionality</p>
+  <div>
+    <a href="https://www.linkedin.com/in/nurizka/" target="_blank" rel="noopener"
+      >LinkedIn <i class="arrow-up-right"></i></a
+    ><a href="http://instagram.com/nurizkaf96" target="_blank" rel="noopener"
+      >Instagram <i class="arrow-up-right"></i></a
+    >
+  </div>
+  <small>© 2026 Nurizka.</small>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="../../js/app.js" defer></script>
+  </body>
+</html>
