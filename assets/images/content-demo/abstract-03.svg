@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Field notes abstract 03</title>
+  <desc id="d3">A dark composition of staggered bars</desc>
+  <rect width="1200" height="800" fill="#1d211f"/>
+  <g fill="#d8ef51">
+    <rect x="80" y="520" width="90" height="200"/>
+    <rect x="270" y="430" width="90" height="290"/>
+    <rect x="460" y="340" width="90" height="380"/>
+    <rect x="650" y="520" width="90" height="200"/>
+    <rect x="840" y="300" width="90" height="420"/>
+  </g>
+  <rect x="1030" y="430" width="90" height="290" fill="#7c9c18"/>
+  <text x="1110" y="710" font-family="monospace" font-size="28" fill="#f3f0e9" text-anchor="middle">03</text>
+</svg>

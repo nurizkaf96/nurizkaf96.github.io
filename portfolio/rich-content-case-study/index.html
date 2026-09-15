@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="This file is the reusable portfolio template. Copy it to a new slug inside your category folder, keep the front matter metadata, and replace each numbered section below with your project&#39;s story." />
+    <title>The case for a content system — Nurizka</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+  <a class="wordmark" href="../../">NURIZKA<span>®</span></a>
+  <button
+    class="menu-toggle"
+    aria-expanded="false"
+    aria-controls="site-nav"
+  >
+    Menu
+  </button>
+  <nav id="site-nav" aria-label="Primary">
+    <a
+      href="../../about/"
+      
+      >About</a
+    >
+    <a
+      href="../../portfolio/"
+      aria-current="page"
+      >Work</a
+    >
+    <a
+      href="../../blog/"
+      
+      >Notes</a
+    >
+    <a class="nav-cta" href="mailto:nurizkaf96@gmail.com"
+      >Let's talk <i class="arrow-up-right"></i></a
+    >
+  </nav>
+</header>
+    <main id="main" class="detail">
+      <article>
+  <header class="detail-hero">
+    <img src="../../assets/images/content-demo/abstract-02.svg" alt="A light offset grid pattern used as the case study cover">
+    
+      <span class="card-meta">Website and Content Management System</span>
+    
+    <h1>The case for a content system</h1>
+    <p class="subtitle">Building a richer, calmer writing layer for a static site — a demonstration case study.</p>
+    
+      <dl class="facts">
+        <div><dt>Category</dt><dd>Website and Content Management System</dd></div>
+        <div><dt>Period</dt><dd>Aug 2026 – Sep 2026</dd></div>
+        <div><dt>Role</dt><dd>Content systems designer</dd></div>
+        <div><dt>Tools</dt><dd>Eleventy, markdown-it, Prism, CSS</dd></div>
+      </dl>
+    
+  </header>
+  <div class="detail-body">
+    <aside class="callout" style="--callout-accent: var(--color-primary-700)">
+  <span class="callout-label" aria-hidden="true">tip</span>
+  <p>This case study is also the <strong>portfolio template</strong>. To start a new project: duplicate this Markdown file into <code>src/content/portfolio/{category}/{slug}.md</code>, update the front matter (<code>title</code>, <code>slug</code>, <code>category</code>, <code>period</code>, <code>year</code>, <code>featured_image</code>, <code>roles</code>, ...), then rewrite each numbered section below. The sections to fill are: <strong>Description, Key Activities, Challenge, Feature or Structure, Design Process, Insight and Learning Takes, Gallery Preview, and Teams.</strong></p>
+</aside>
+<h2>1 · Description</h2>
+<p>What was this project about? Write a short, plain-language summary of the product or initiative, who it was for, and what made it worth doing.</p>
+<p>We write case studies that mix prose, evidence, and visuals. Plain Markdown carries the prose but struggles with the <em>rich</em> pieces: captioned figures, galleries, callouts, metrics, timelines, and before/after comparisons. The goal was a content layer with four properties:</p>
+<ul>
+<li><strong>Lightweight.</strong> No new frontend framework, no client-side renderer.</li>
+<li><strong>Portable.</strong> Content stays readable as source in any editor.</li>
+<li><strong>Predictable.</strong> A documented, stable vocabulary an agent can generate against.</li>
+<li><strong>Static.</strong> Everything renders at build time; JavaScript only enhances.</li>
+</ul>
+<p>Use metrics for the outcomes that matter:</p>
+<div class="metric">
+  <span class="metric-value">24</span>
+  <span class="metric-label">Shortcodes defined and documented</span>
+</div>
+<div class="metric">
+  <span class="metric-value">9</span>
+  <span class="metric-label">Callout variants with semantic meaning</span>
+</div>
+<div class="metric">
+  <span class="metric-value">0</span>
+  <span class="metric-label">New client-side dependencies</span>
+</div>
+<h2>2 · Key Activities</h2>
+<p>List the concrete activities the team ran — research, design, build, or delivery. A checklist keeps it scannable:</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox" checked=""type="checkbox"> Content modelling</label></li>
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox" checked=""type="checkbox"> Shortcode design</label></li>
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox" checked=""type="checkbox"> Markdown configuration</label></li>
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox" checked=""type="checkbox"> A11y review</label></li>
+<li class="task-list-item enabled"><label><input class="task-list-item-checkbox"type="checkbox"> Record a narrated walkthrough</label></li>
+</ul>
+<p>Or as a plain list when order matters:</p>
+<ol>
+<li>Audited every editorial block the site needed</li>
+<li>Wrote the content spec — syntax, rules, and security constraints</li>
+<li>Registered the shortcode layer and GFM markdown configuration</li>
+<li>Shipped a demonstration case study and its field-guide post</li>
+</ol>
+<h2>3 · Challenge</h2>
+<p>Describe the problem you started from. What was broken, missing, or unclear before the work began?</p>
+<aside class="callout" style="--callout-accent: #b98a1a">
+  <span class="callout-label" aria-hidden="true">warning</span>
+  <p>A shortcode is a structural commitment. Adding one to a page means maintaining its semantics and its styles forever.</p>
+</aside>
+<p>In our case, the authoring experience was the blocker: separate tools produced inconsistent pages, and the gap between story and evidence kept widening. We needed one authoring format that could express prose <em>and</em> rich project evidence without pulling in a frontend framework.</p>
+<h2>4 · Feature or Structure</h2>
+<p>Show the shape of the solution. A table maps each piece to its job:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Rendered by</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic Markdown</td>
+<td>markdown-it</td>
+<td>Headings, lists</td>
+</tr>
+<tr>
+<td>GFM</td>
+<td>markdown-it</td>
+<td>Tables, task lists</td>
+</tr>
+<tr>
+<td>Rich blocks</td>
+<td>Eleventy shortcodes</td>
+<td>Figures, callouts</td>
+</tr>
+</tbody>
+</table>
+<p>Or use columns for parallel ideas:</p>
+<div class="content-columns">
+<div class="column">
+  <p><strong>Small vocabulary.</strong> Twenty-odd shortcodes cover nearly every editorial need. If Markdown says it, Markdown does it.</p>
+</div>
+<div class="column">
+  <p><strong>One job each.</strong> <code>figure</code> for editorial images, <code>metric</code> for statistics, <code>timeline</code> for chronology. No cleverness hiding in arguments.</p>
+</div>
+</div>
+<details class="content-details">
+  <summary>Appendices and full documentation</summary>
+  <div class="details-body"><p>The complete syntax and argument order for every shortcode lives in <code>docs/CONTENT-SPEC.md</code>, kept stable so tooling can rely on it.</p>
+</div>
+</details>
+<h2>5 · Design Process</h2>
+<p>Walk through how the work unfolded. The timeline shortcode suits milestones:</p>
+<ol class="content-timeline">
+<li class="event">
+  <time class="event-date" datetime="2026-08-19">2026-08-19</time>
+  <h3>Audit</h3>
+  <div class="event-body"><p>Mapped every editorial block the site already needed into future content.</p>
+</div>
+</li>
+<li class="event">
+  <time class="event-date" datetime="2026-08-26">2026-08-26</time>
+  <h3>Spec</h3>
+  <div class="event-body"><p>Wrote <code>docs/CONTENT-SPEC.md</code> — syntax, rules, and security constraints.</p>
+</div>
+</li>
+<li class="event">
+  <time class="event-date" datetime="2026-09-02">2026-09-02</time>
+  <h3>Build</h3>
+  <div class="event-body"><p>Registered the shortcode layer and the GFM markdown configuration.</p>
+</div>
+</li>
+<li class="event">
+  <time class="event-date" datetime="2026-09-12">2026-09-12</time>
+  <h3>Showcase</h3>
+  <div class="event-body"><p>Shipped this case study and the companion field-guide post.</p>
+</div>
+</li>
+</ol>
+<p>For visual change, use the before/after shortcode:</p>
+<div class="before-after" data-before-after>
+  <img class="ba-before-img" src="../../assets/images/content-demo/before.svg" alt="Before" loading="lazy" decoding="async">
+  <img class="ba-after-img" src="../../assets/images/content-demo/after.svg" alt="After" loading="lazy" decoding="async">
+  <div class="ba-divider" aria-hidden="true"><span class="ba-handle" aria-hidden="true"></span></div>
+  <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Reveal before and after">
+  <span class="ba-label ba-label--before">Before</span>
+  <span class="ba-label ba-label--after">After</span>
+</div>
+<p>Drag the slider to compare the two states.</p>
+<h2>6 · Insight and Learning Takes</h2>
+<p>What did you learn? Pullquotes give weight to the single biggest takeaway:</p>
+<blockquote class="pullquote">
+  <p>The authoring experience is the product experience.</p>
+</blockquote>
+<aside class="callout" style="--callout-accent: #8766b0">
+  <span class="callout-label" aria-hidden="true">insight</span>
+  <p>The original scope asked for a &quot;fancy table component&quot;. The right answer turned out to be plain GFM tables plus a well-spaced stylesheet.</p>
+</aside>
+<aside class="callout" style="--callout-accent: #4a8f5f">
+  <span class="callout-label" aria-hidden="true">success</span>
+  <p>The full inventory now renders on production with zero client-side rendering.</p>
+</aside>
+<p>A principle that showed up repeatedly, in the words of the team that shipped it:</p>
+<figure class="content-quote">
+  <blockquote><p>Markdown handles writing. Shortcodes handle meaningfully richer content. CSS handles presentation. JavaScript handles optional interaction.</p>
+</blockquote>
+  <figcaption><cite>Eleventy maintainers</cite>, Project documentation</figcaption>
+</figure>
+<aside class="content-aside">
+  <p>Context that serves the reader but not the argument belongs in an aside like this one.</p>
+</aside>
+<h2>7 · Gallery Preview</h2>
+<p>Group the project's key visuals. Click any image to open it full size.</p>
+<div class="gallery" data-gallery>
+<figure class="gallery-item">
+  <img src="../../assets/images/content-demo/abstract-01.svg" alt="Direction one" loading="lazy" decoding="async" data-lightbox>
+  <figcaption>Direction one</figcaption>
+</figure>
+<figure class="gallery-item">
+  <img src="../../assets/images/content-demo/abstract-02.svg" alt="Direction two" loading="lazy" decoding="async" data-lightbox>
+  <figcaption>Direction two</figcaption>
+</figure>
+<figure class="gallery-item">
+  <img src="../../assets/images/content-demo/abstract-03.svg" alt="Direction three" loading="lazy" decoding="async" data-lightbox>
+  <figcaption>Direction three</figcaption>
+</figure>
+</div>
+<p>When one image matters more than the others, give it a figure with a caption:</p>
+<figure class="content-figure">
+  <img src="../../assets/images/content-demo/abstract-03.svg" alt="A dark composition of staggered bars" loading="lazy" decoding="async">
+  <figcaption>A captioned figure with a credit attached.</figcaption>
+</figure>
+<h2>8 · Teams</h2>
+<p>Introduce the people who made it happen. A table keeps names and roles tidy:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nurizka</td>
+<td>Designer &amp; developer</td>
+</tr>
+</tbody>
+</table>
+<p>Or use a list when the team is larger:</p>
+<ul>
+<li><strong>Nurizka F</strong> — Designer &amp; Project Manager</li>
+<li><strong>Khairani U</strong> — Analyst &amp; Project Manager</li>
+<li><strong>Alfian K</strong> — Back-End Developer</li>
+<li><strong>Dzaki F</strong> — Front-End Developer</li>
+</ul>
+<hr class="content-divider" aria-hidden="true">
+<h2>Closing record</h2>
+<p>A final note or embedded walkthrough closes the page:</p>
+<a class="linkcard" href="https://www.11ty.dev/docs/shortcodes/" target="_blank" rel="noopener">
+  <span class="linkcard-url">11ty.dev</span>
+  <span class="linkcard-title">Eleventy shortcodes</span>
+  <span class="linkcard-desc">The official reference for single and paired shortcodes.</span>
+  <i class="arrow-up-right" aria-hidden="true"></i>
+</a>
+<p><a class="button" href="../../blog/rich-content-showcase/">Explore the field guide <i class="arrow-down-right" aria-hidden="true"></i></a></p>
+<p>The outcome is boring in the best way: posts are plain Markdown files, the build is still a single static command, and the reading experience stays rich.</p>
+
+  </div>
+</article>
+    </main>
+    <footer class="site-footer">
+  <a class="wordmark" href="../../">NURIZKA<span>®</span></a>
+  <p>Finding Beauty in Functionality</p>
+  <div>
+    <a href="http://linkedin.com/in/nurizka/" target="_blank" rel="noopener"
+      >LinkedIn <i class="arrow-up-right"></i></a
+    ><a href="" target="_blank" rel="noopener"
+      >GitHub <i class="arrow-up-right"></i></a
+    >
+  </div>
+  <small>© 2026 Nurizka.</small>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="../../js/app.js" defer></script>
+  </body>
+</html>
