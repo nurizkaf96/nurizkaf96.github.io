@@ -7,7 +7,11 @@
   function initMotion() {
     const els = document.querySelectorAll("[data-animate]");
     if (!els.length) return;
-    if (!window.anime || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (
+      matchMedia("(max-width: 700px)").matches ||
+      !window.anime ||
+      matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       els.forEach((el) => el.removeAttribute("data-animate"));
       return;
     }
@@ -28,6 +32,13 @@
         el.removeAttribute("data-animate");
       });
     };
+    if (
+      document.body.dataset.page === "portfolio" ||
+      document.body.dataset.page === "blog"
+    ) {
+      els.forEach((el, i) => play(el, i * 100));
+      return;
+    }
     if ("IntersectionObserver" in window) {
       const io = new IntersectionObserver(
         (entries) => {
